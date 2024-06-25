@@ -1,0 +1,42 @@
+@use 'reset';
+@use 'typography';
+
+@use 'header';
+@use 'mixin';
+
+
+// scss폴더 styles.scss / _vars.scss / _reset.scss 생성
+// styles폴더 생성
+// index에서 styles.css 링크
+// 터미널 sass --watch scss:styles 입력
+// styles.scss가 최상위 파일 @use reset; ->> _reset.scss를 연결
+// 각 파일에는 스타일을 작성
+// mixin, if, ($abs-pos: true)
+// flex-layout
+
+// mixin name($argu) {
+// color: $argu;
+// something
+// }
+
+// 사용할때
+// p { @include name(blue}; }
+
+// @mixin flexbox($jc: center, $ai: center) {
+//     display: flex;
+//     justify-content: $jc;
+//     align-items: $ai;
+//   }
+  
+//   @mixin inline-flexbox($jc: center, $ai: center) {
+//     display: inline-flex;
+//     justify-content: $jc;
+//     align-items: $ai;
+//   }
+  
+//   @mixin column-flexbox($jc: center, $ai: center) {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: $jc;
+//     align-items: $ai;
+//   }
