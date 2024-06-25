@@ -1,10 +1,16 @@
-@use 'vars' as *;
+@use "vars" as *;
+@use "mixins" as *;
 
 .top-header {
     display: flex;
     justify-content: space-between;
     margin: 0 10% auto;
     padding: 1rem 0;
+
+        div.logo {
+            @include blue-bg-headings(1.5rem);
+        }
+
 }
 
 
@@ -23,6 +29,8 @@ nav {
             display: inline-block;
             padding: 0.5rem 1rem;
             a {
+                
+
                 color: $text-color;
             }
         }    

@@ -1,0 +1,8 @@
+@use "vars" as *;
+
+
+@mixin blue-bg-headings($fontsize: 2rem) {
+    background-color: $primary-color;
+    font-family: $headings-font;
+    color: $text-color;
+}
