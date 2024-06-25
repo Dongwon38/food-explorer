@@ -1,9 +1,8 @@
-@use 'reset';
-@use 'typography';
+@use "normalize";
+@use "typography";
 
-@use 'header';
-@use 'mixin';
-
+@use "header";
+@use "mixin";
 
 // scss폴더 styles.scss / _vars.scss / _reset.scss 생성
 // styles폴더 생성
@@ -27,13 +26,13 @@
 //     justify-content: $jc;
 //     align-items: $ai;
 //   }
-  
+
 //   @mixin inline-flexbox($jc: center, $ai: center) {
 //     display: inline-flex;
 //     justify-content: $jc;
 //     align-items: $ai;
 //   }
-  
+
 //   @mixin column-flexbox($jc: center, $ai: center) {
 //     display: flex;
 //     flex-direction: column;
