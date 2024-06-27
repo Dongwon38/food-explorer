@@ -1,8 +1,17 @@
 @use "vars" as *;
 
-
+// Mixins
 @mixin blue-bg-headings($fontsize: 2rem) {
-    background-color: $primary-color;
-    font-family: $headings-font;
-    color: $text-color;
+  background-color: $primary-color;
+  font-family: $headings-font;
+  color: $text-color;
+}
+
+// Placeholders
+%aside-header {
+  margin: 0;
+  color: $text-color;
+  background-color: $primary-color;
+  padding: 1rem;
+  font-weight: 500;
 }

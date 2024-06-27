@@ -1,0 +1,36 @@
+@use "vars" as *;
+@use "_mixins.scss";
+
+.aside-latest-recipes {
+  h3 {
+    @extend %aside-header;
+  }
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+    background-color: $aside-light;
+
+    li {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+
+      img {
+        border: 1px solid $aside-image-border;
+      }
+
+      span {
+        color: $content-text-color;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0.8rem;
+      }
+    }
+
+    li:nth-child(even) {
+      background-color: $aside-dark;
+    }
+  }
+}
