@@ -2,6 +2,8 @@
 @use "mixins" as *;
 
 .aside-latest-recipes {
+  margin-bottom: 0.625rem;
+
   h3 {
     @extend %aside-header;
   }

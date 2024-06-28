@@ -2,6 +2,8 @@
 @use "mixins" as *;
 
 .aside-cuisines {
+  margin-bottom: 0.625rem;
+
   h3 {
     @extend %aside-header;
   }
@@ -15,7 +17,8 @@
     flex-wrap: wrap;
 
     li {
-      width: 34%;
+      width: 9.2rem;
+      padding: 0.5rem 0.625rem;
 
       a {
         color: $content-text-color;
