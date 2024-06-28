@@ -10,5 +10,5 @@ btnMenu.addEventListener("mousedown", function (e) {
 
 function openMenu() {
   body.classList.toggle("show");
-  nav.classList.add("activated");
+  dropdownBox.classList.toggle("activated");
 }

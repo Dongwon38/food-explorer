@@ -1,6 +1,7 @@
 @use "vars" as *;
 @use "mixins" as *;
 
+// header general
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,12 +15,64 @@
   }
   .btn-menu {
     cursor: pointer;
-    img {
-      width: 2rem;
-    }
   }
 }
 
+// <---------- responsive logo start ---------->
+.logo-small {
+  display: block;
+}
+
+.logo-large {
+  display: none;
+}
+
+@media (min-width: 25rem) {
+  .logo-small {
+    display: none;
+  }
+  .logo-large {
+    display: block;
+  }
+}
+// <---------- responsive logo end ---------->
+
+// <---------- function dropdown toggle start ---------->
+.dropdown-box {
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  // closing-transition
+  transition: height 0.3s ease, visibility 0s 0.3s;
+}
+
+.dropdown-box.activated {
+  // opening-transition
+  transition: height 0.3s ease, visibility 0s 0.3s;
+}
+
+.show .dropdown-box {
+  // opening-transition
+  transition: height 0.3s ease, visibility 0s;
+  visibility: visible;
+  height: 13rem;
+}
+// <---------- function dropdown toggle end ---------->
+
+// <---------- hover effect start ---------->
+.nav-bar li:hover {
+  background-color: $white;
+  a {
+    color: $primary-color;
+    transition: 1s;
+  }
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+// <---------- hover effect end ---------->
+
+// dropdown-box style
 .dropdown-box {
   border-top: 1px solid black;
   border-right: 1px solid $secondary-color;
@@ -80,6 +133,7 @@
   }
 }
 
+// style for temporary
 a {
   color: white;
   text-decoration: none;
