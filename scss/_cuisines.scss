@@ -2,8 +2,6 @@
 @use "mixins" as *;
 
 .aside-cuisines {
-  margin: 0.625rem;
-
   h3 {
     @extend %aside-header;
   }
