@@ -4,24 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- style sheets -->
-     
-    <link rel="stylesheet" href="styles/normalize-fwd.css" />
+
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Food Explorer</title>
   </head>
   <body>
     <header>
-      <div class="top-header">
+      <div class="header">
         <div class="logo">LOGO</div>
-        <div class="links">
+        <div class="social-links">
           <a href="">F</a>
           <a href="">G</a>
           <a href="">X</a>
@@ -39,149 +44,197 @@
       </nav>
     </header>
     <main>
+      <h1 class="screen-reader-text">Food Explorer</h1>
       <section class="section-imgs">
-        <div>
-          <img src="images/mussel-small.jpg" alt="" />
-          <span class="img-title">Lorem ipsum dolor sit</span>
-        </div>
-        <div>
-          <img src="images/salad.jpg" alt="" />
-          <span class="img-title">Lorem ipsum dolor sit</span>
-        </div>
-        <div>
-          <img src="images/pancake.jpg" alt="" />
-          <span class="img-title">Lorem ipsum dolor sit</span>
-        </div>
+        <h2 class="screen-reader-text">Recipe Images</h2>
+        <figure>
+          <img
+            src="images/mussel-small.jpg"
+            alt="image of a bowl of asian mussels"
+          />
+          <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+        </figure>
+        <figure>
+          <img src="images/salad.jpg" alt="image of a bowl of asian salad" />
+          <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+        </figure>
+        <figure>
+          <img src="images/pancake.jpg" alt="image of asian duck pancakes" />
+          <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+        </figure>
       </section>
       <aside>
-        <div class="aside-latest-recipes">
+        <section class="aside-latest-recipes">
           <h3 class="aside-title">LATEST RECIPES</h3>
-          <ul>
-            <li>
-              <img src="images/lamb-tb.jpg" alt="met consec tetur elit" /><span
-                >met consec tetur elit</span
-              >
-            </li>
-            <li>
-              <img
-                src="images/breakfast-tb.jpg"
-                alt="archi tecto dolores"
-              /><span>archi tecto dolores</span>
-            </li>
-            <li>
-              <img src="images/calamari-tb.jpg" alt="mexpe dita ciatis" /><span
-                >mexpe dita ciatis</span
-              >
-            </li>
-            <li>
-              <img src="images/steak-tb.jpg" alt="fugiat eaque aore" /><span
-                >fugiat eaque aore</span
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="aside-cuisines">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">
+                  <img
+                    src="images/lamb-tb.jpg"
+                    alt="image of a grilled lamb dish"
+                  />
+                  <p>met consec tetur elit</p></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="images/breakfast-tb.jpg"
+                    alt="image of a mexican breakfast"
+                  />
+                  <p>archi tecto dolores</p></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="images/calamari-tb.jpg"
+                    alt="image of braised calamari in tomato sauce"
+                  />
+                  <p>mexpe dita ciatis</p></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="images/steak-tb.jpg"
+                    alt="image of a cross-hatch grilled sirloin steak"
+                  />
+                  <p>fugiat eaque aore</p></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+        <section class="aside-cuisines">
           <h3 class="aside-title">CUISINES</h3>
-          <ul>
-            <li>
-              <a href="">American <span class="cusisines-number">(95)</span></a>
-            </li>
-            <li>
-              <a href="">Asian <span class="cusisines-number">(33)</span></a>
-            </li>
-            <li>
-              <a href="">Cambodian <span class="cusisines-number">(3)</span></a>
-            </li>
-            <li>
-              <a href="">Chinese <span class="cusisines-number">(281)</span></a>
-            </li>
-            <li>
-              <a href="">Filipino <span class="cusisines-number">(8)</span></a>
-            </li>
-            <li>
-              <a href="">French <span class="cusisines-number">(40)</span></a>
-            </li>
-            <li>
-              <a href="">German <span class="cusisines-number">(7)</span></a>
-            </li>
-            <li>
-              <a href="">Greek <span class="cusisines-number">(29)</span></a>
-            </li>
-            <li>
-              <a href="">Indian <span class="cusisines-number">(44)</span></a>
-            </li>
-            <li>
-              <a href="">Italian <span class="cusisines-number">(60)</span></a>
-            </li>
-            <li>
-              <a href="">Jamaican <span class="cusisines-number">(7)</span></a>
-            </li>
-            <li>
-              <a href=""
-                >Japanese <span class="cusisines-number">(202)</span></a
-              >
-            </li>
-            <li>
-              <a href="">Korean <span class="cusisines-number">(120)</span></a>
-            </li>
-            <li>
-              <a href=""
-                >Malaysian <span class="cusisines-number">(12)</span></a
-              >
-            </li>
-            <li>
-              <a href=""
-                >Mediterranean <span class="cusisines-number">(9)</span></a
-              >
-            </li>
-            <li>
-              <a href="">Mexican <span class="cusisines-number">(25)</span></a>
-            </li>
-            <li>
-              <a href="">Southern <span class="cusisines-number">(14)</span></a>
-            </li>
-          </ul>
-        </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#"
+                  >American <span class="cuisines-number">(95)</span></a
+                >
+              </li>
+              <li>
+                <a href="#">Asian <span class="cuisines-number">(33)</span></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Cambodian <span class="cuisines-number">(3)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Chinese <span class="cuisines-number">(281)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Filipino <span class="cuisines-number">(8)</span></a
+                >
+              </li>
+              <li>
+                <a href="#">French <span class="cuisines-number">(40)</span></a>
+              </li>
+              <li>
+                <a href="#">German <span class="cuisines-number">(7)</span></a>
+              </li>
+              <li>
+                <a href="#">Greek <span class="cuisines-number">(29)</span></a>
+              </li>
+              <li>
+                <a href="#">Indian <span class="cuisines-number">(44)</span></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Italian <span class="cuisines-number">(60)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Jamaican <span class="cuisines-number">(7)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Japanese <span class="cuisines-number">(202)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Korean <span class="cuisines-number">(120)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Malaysian <span class="cuisines-number">(12)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Mediterranean <span class="cuisines-number">(9)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Mexican <span class="cuisines-number">(25)</span></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  >Southern <span class="cuisines-number">(14)</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
       </aside>
-      <section class="section-posts">
-        <article class="card">
+      <section class="section-blog-posts">
+        <article class="blog-card">
           <div class="article-heading">
             <h3>lorem ipsum dolor sit amet</h3>
-            <span>Posted by Mike Lee on Sunday, August 25, 2013</span>
+            <p>Posted by Mike Lee on Sunday, August 25, 2013</p>
           </div>
-          <img src="images/pasta.jpg" alt="" />
+          <img
+            src="images/pasta.jpg"
+            alt="image of a bowl of spaghetti pomodoro with sauteed prawns"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            soluta rem laudantium, enim fuga accusamus quia repellendus illo
+            cum.
+          </p>
+          <button class="btn-read-more">READ MORE...</button>
+        </article>
+        <article class="blog-card">
+          <div class="article-heading">
+            <h3>lorem ipsum dolor sit amet</h3>
+            <p>Posted by Mike Lee on Sunday, August 25, 2013</p>
+          </div>
+          <img
+            src="images/ramen.jpg"
+            alt="image of a bowl of shoyu ramen with pork chasu"
+          />
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam,
             deleniti? Eveniet veritatis laudantium unde nesciunt impedit omnis
             ea qui a laboriosam error, voluptatum, in quibusdam! Harum modi sunt
             quo corrupti!
           </p>
-          <div class="btn-read-more">READ MORE...</div>
+          <button class="btn-read-more">READ MORE...</button>
         </article>
-        <article class="card">
-          <div class="article-heading">
-            <h3>lorem ipsum dolor sit amet</h3>
-            <span>Posted by Mike Lee on Sunday, August 25, 2013</span>
-          </div>
-          <img src="images/ramen.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam,
-            deleniti? Eveniet veritatis laudantium unde nesciunt impedit omnis
-            ea qui a laboriosam error, voluptatum, in quibusdam! Harum modi sunt
-            quo corrupti!
-          </p>
-          <div class="btn-read-more">READ MORE...</div>
-        </article>
+        <a href="#"
+          ><img
+            class="older-posts-img"
+            src="images/previous-btn.png"
+            alt="clickable image that links to older blog posts"
+        /></a>
       </section>
-      <img
-        class="btn-previous"
-        src="images/previous-btn.png"
-        alt="previous-btn"
-      />
     </main>
     <footer>
       &copy; 2013 Site designed by Michael Lee. For educational purpose only.
-      Image Credits
+      <a href="#">Image Credits</a>
     </footer>
   </body>
 </html>

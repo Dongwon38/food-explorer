@@ -1,0 +1,44 @@
+@use "vars" as *;
+@use "mixins" as *;
+
+.aside-latest-recipes {
+  margin-bottom: 0.625rem;
+
+  h3 {
+    @extend %aside-header;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: $aside-light;
+    width: 100%;
+
+    li {
+      padding: 1rem;
+      display: flex;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        img {
+          border-left: 2px solid $aside-image-border;
+          border-top: 2px solid $aside-image-border;
+          border-right: 1px solid $aside-image-border;
+          border-bottom: 1px solid $aside-image-border;
+        }
+
+        p {
+          color: $content-text-color;
+          text-transform: uppercase;
+          padding: 0.8rem;
+        }
+      }
+    }
+
+    li:nth-child(even) {
+      background-color: $aside-dark;
+    }
+  }
+}

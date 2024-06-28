@@ -1,0 +1,44 @@
+@use "vars" as *;
+
+// Mixins
+@mixin blue-bg-headings($fontsize: 2rem) {
+  background-color: $primary-color;
+  font-family: $headings-font;
+  color: $header-text-color-1;
+}
+
+//font mixins
+@mixin headings-font() {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+@mixin nav-font() {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin body-font () {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+// Placeholders
+%aside-header {
+  margin: 0;
+  color: $header-text-color-1;
+  background-color: $primary-color;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+%headers {
+  color: $header-text-color-1;
+  @include headings-font()
+}
