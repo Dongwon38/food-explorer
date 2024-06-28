@@ -2,11 +2,17 @@
 
 .blog-card {
   background-color: $blog-background-color;
-  padding: 1rem;
+  padding: 0.625rem;
+  margin-bottom: 0.625rem;
 
   .article-heading {
     h3 {
-      font-size: 3rem;
+      font-size: 2rem;
+      margin: 0;
     }
+  }
+
+  p {
+    color: $content-text-color;
   }
 }
