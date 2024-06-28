@@ -9,7 +9,19 @@
   }
 
   ul {
+    background-color: $aside-light;
     padding: 0rem;
     width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 34%;
+
+      a {
+        color: $content-text-color;
+      }
+    }
   }
 }
