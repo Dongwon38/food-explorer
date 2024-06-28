@@ -4,6 +4,10 @@ const dropdownBox = document.getElementById("dropdown-box");
 
 btnMenu.addEventListener("click", openMenu);
 
+btnMenu.addEventListener("mousedown", function (e) {
+  e.preventDefault();
+});
+
 function openMenu() {
   body.classList.toggle("show");
   nav.classList.add("activated");
