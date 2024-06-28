@@ -4,13 +4,13 @@
 @mixin blue-bg-headings($fontsize: 2rem) {
   background-color: $primary-color;
   font-family: $headings-font;
-  color: $text-color;
+  color: $header-text-color-1;
 }
 
 // Placeholders
 %aside-header {
   margin: 0;
-  color: $text-color;
+  color: $content-text-color;
   background-color: $primary-color;
   padding: 1rem;
   font-weight: 500;
