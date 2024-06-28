@@ -1,0 +1,12 @@
+@use "vars" as *;
+
+.blog-card {
+  background-color: $blog-background-color;
+  padding: 1rem;
+
+  .article-heading {
+    h3 {
+      font-size: 3rem;
+    }
+  }
+}
