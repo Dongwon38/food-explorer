@@ -19,29 +19,67 @@
     />
     <!-- style sheets -->
 
+    <link rel="stylesheet" href="styles/normalize-fwd.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- favicon font awesome -->
+    <script
+      src="https://kit.fontawesome.com/dea62d9c4c.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js -->
+    <script defer src="scripts/script-menu.js"></script>
     <title>Food Explorer</title>
   </head>
   <body>
     <header>
       <div class="header">
-        <div class="logo">LOGO</div>
+        <div class="logo">
+          <img class="logo-small" src="images/small-logo.jpg" />
+          <img class="logo-large" src="images/logo.png" />
+        </div>
+        <img class="btn-menu" id="btn-menu" src="images/menu.png" />
+        <div class="search-bar">
+          <input type="text" placeholder="Search" />
+          <img src="images/search.png" alt="search icon" />
+        </div>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href="">Recipes</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
         <div class="social-links">
-          <a href="">F</a>
-          <a href="">G</a>
-          <a href="">X</a>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-google"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
         </div>
       </div>
-      <nav class="nav-bar">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Reviews</a></li>
-          <li><a href="">Recipes</a></li>
-          <li><a href="">Contact</a></li>
-          <li><input type="text" placeholder="Search" /></li>
-        </ul>
-      </nav>
+      <div class="dropdown-box" id="dropdown-box">
+        <div class="search-bar">
+          <div class="search-bar-innerbox">
+            <input type="text" placeholder="Search" />
+            <img src="images/search.png" alt="search icon" />
+          </div>
+        </div>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Reviews</a></li>
+            <li><a href="">Recipes</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-google"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
     </header>
     <main>
       <h1 class="screen-reader-text">Food Explorer</h1>
@@ -49,8 +87,11 @@
         <h2 class="screen-reader-text">Recipe Images</h2>
         <figure>
           <img
-            src="images/mussel-small.jpg"
-            alt="image of a bowl of asian mussels"
+              srcset="images/mussel-small.jpg 350w
+              images/mussel.jpg 704w,"
+              sizes="(max-width: 700px), 350px, 704px"
+              src="images/mussel-small.jpg"
+              alt="image of a bowl of asian mussels"
           />
           <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
         </figure>
