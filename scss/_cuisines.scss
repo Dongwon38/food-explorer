@@ -3,23 +3,23 @@
 
 .aside-cuisines {
   margin-bottom: 0.625rem;
-
+  background-color: $aside-light;
   h3 {
     @extend %aside-header;
   }
 
   ul {
-    background-color: $aside-light;
-    padding: 0rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0;
     width: 100%;
-    height: 20rem;
+    max-width: 28.75rem;
     display: flex;
     flex-wrap: wrap;
 
     li {
-      width: 9.2rem;
-      padding: 0.5rem 0.625rem;
-
+      width: 7.4rem;
+      padding: 0.5rem 0;
+      list-style: none;
       a {
         color: $content-text-color;
       }
