@@ -1,7 +1,28 @@
+@use "vars" as *;
+@use "mixins" as *;
+
 body {
   background-image: url("../images/bg.jpg");
+  margin: 0 auto;
 }
 
 main {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.site-wrapper {
   margin: 0.625rem;
+}
+
+@media (min-width: #{$desktop}) {
+  .site-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 13.75rem;
+    gap: 10px;
+  }
+
+  aside {
+    grid-row: span 2;
+  }
 }

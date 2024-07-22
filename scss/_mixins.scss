@@ -21,13 +21,11 @@
   font-style: normal;
 }
 
-@mixin body-font () {
+@mixin body-font() {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
-
 
 // Placeholders
 %aside-header {
@@ -36,9 +34,10 @@
   background-color: $primary-color;
   padding: 1rem;
   font-weight: 500;
+  font-size: 1.625rem;
 }
 
 %headers {
   color: $header-text-color-1;
-  @include headings-font()
+  @include headings-font();
 }
