@@ -1,7 +1,9 @@
 @use "vars" as *;
 @use "mixins" as *;
-
 // header general
+.header-desktop {
+  display: none;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -17,16 +19,14 @@
     cursor: pointer;
   }
 }
-
 // <---------- responsive logo start ---------->
 .logo-small {
   display: block;
 }
-
 .logo-large {
   display: none;
 }
-
+// should i use 25 rem for this?
 @media (min-width: 25rem) {
   .logo-small {
     display: none;
@@ -35,8 +35,6 @@
     display: block;
   }
 }
-// <---------- responsive logo end ---------->
-
 // <---------- function dropdown toggle start ---------->
 .dropdown-box {
   height: 0;
@@ -45,39 +43,22 @@
   // closing-transition
   transition: height 0.3s ease, visibility 0s 0.3s;
 }
-
 .dropdown-box.activated {
   // opening-transition
   transition: height 0.3s ease, visibility 0s 0.3s;
 }
-
 .show .dropdown-box {
   // opening-transition
   transition: height 0.3s ease, visibility 0s;
   visibility: visible;
-  height: 13rem;
+  height: 12.8rem;
 }
 // <---------- function dropdown toggle end ---------->
-
-// <---------- hover effect start ---------->
-.nav-bar li:hover {
-  background-color: $white;
-  a {
-    color: $primary-color;
-    transition: 1s;
-  }
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-// <---------- hover effect end ---------->
-
 // dropdown-box style
 .dropdown-box {
   border-top: 1px solid black;
   border-right: 1px solid $secondary-color;
   border-bottom: 1px solid $secondary-color;
-
   .search-bar,
   ul li,
   .social-links {
@@ -86,7 +67,6 @@
     width: 100%;
     height: 1.8rem;
   }
-
   .search-bar {
     .search-bar-innerbox {
       display: flex;
@@ -108,7 +88,6 @@
       margin: 0.3rem 0.5rem;
     }
   }
-
   ul {
     list-style-type: none;
     padding: 0;
@@ -119,22 +98,226 @@
       background-color: $primary-color;
       border: 1px solid $secondary-color;
       font-size: 1rem;
+      a {
+        text-align: center;
+        color: $header-text-color-1;
+        width: 100%;
+        padding: 0.3rem 0;
+      }
+      a:hover {
+        color: $primary-color;
+        background-color: $white;
+        transition: 1s;
+      }
     }
   }
-
   .social-links {
     background-color: $white;
     padding: 0.2rem;
+    overflow: hidden;
     a {
-      color: $primary-color;
+      @include animate-to-top;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
       font-size: 1.3rem;
       padding: 0 0.5rem;
+      // transition: all 0.3s ease-in-out;
+      .primary {
+        color: $primary-color;
+      }
+      .grey {
+        color: $social-icon-hover-color;
+      }
+      &:hover {
+        @include animate-to-bottom;
+      }
     }
   }
 }
-
-// style for temporary
-a {
-  color: white;
-  text-decoration: none;
+// ----------Tablet small-----------
+@media (min-width: $tablet-small) {
+  header {
+    .btn-menu,
+    .dropdown-box {
+      display: none;
+    }
+    .show .dropdown-box {
+      display: none;
+    }
+    .header {
+      padding: 1rem 0 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      row-gap: 1rem;
+      .social-links {
+        display: none;
+      }
+      .search-bar {
+        flex: 1.8;
+        width: 9rem;
+        display: flex;
+        position: relative;
+        input {
+          flex: 1;
+          width: 9rem;
+          padding: 0.6153rem 0.5rem;
+          border-radius: 0.4rem;
+          border: none;
+          box-shadow: inset 0 0 0.4rem rgba(0, 0, 0, 0.323);
+          background-color: $search-box-color;
+        }
+        img {
+          position: absolute;
+          right: 0.4rem;
+          top: 0.35rem;
+        }
+      }
+      .nav-bar {
+        display: block;
+        width: 100%;
+        background-color: $secondary-color;
+        ul {
+          width: 97.5%;
+          display: flex;
+          justify-content: space-around;
+          margin: 0 auto;
+          padding: 0.5rem;
+          background-color: $primary-color;
+          li {
+            list-style: none;
+            a {
+              color: $header-text-color-1;
+            }
+          }
+        }
+      }
+      .logo {
+        .logo-large {
+          margin-top: 0rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $tablet-large) {
+  header {
+    .header {
+      .nav-bar {
+        ul {
+          font-size: 1.2rem;
+        }
+      }
+      .dropdown-box.activated {
+        height: 0;
+      }
+      .social-links {
+        scale: 1.5;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        a {
+          color: $primary-color;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  header {
+    background: linear-gradient(180deg, white 63.5%, $secondary-color 25%);
+    .header,
+    .dropdown-box {
+      display: none;
+    }
+    .header-desktop {
+      margin: 0 auto;
+      max-width: 64.6875rem;
+      padding: 1rem 0 0 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      .logo-and-icons-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+        .logo-small {
+          display: none;
+        }
+        .logo-large {
+          display: block;
+        }
+        .social-links {
+          display: block;
+          display: flex;
+          justify-content: space-between;
+          gap: 2rem;
+          a {
+            color: $primary-color;
+            display: inline-block;
+            scale: 1.5;
+          }
+          a:hover {
+            color: $social-icon-hover-color;
+          }
+        }
+      }
+      .nav-bar-and-search-bar-wrapper {
+        padding: 0 0.625rem;
+        display: flex;
+        justify-content: space-around;
+        .nav-bar {
+          background-color: $secondary-color;
+          flex: 3;
+          font-size: 1.2rem;
+          ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+            background-color: $primary-color;
+            li {
+              list-style: none;
+              text-align: center;
+              flex: 2;
+              a {
+                color: $header-text-color-1;
+                padding: 0.5rem 0;
+                display: block;
+                width: 100%;
+              }
+              a:hover {
+                color: $primary-color;
+                background-color: $white;
+                transition: 1s;
+              }
+            }
+          }
+        }
+      }
+      .search-bar {
+        display: flex;
+        position: relative;
+        flex: 1;
+        input {
+          flex: 1;
+          box-shadow: none;
+          padding: 0.6153rem 0.5rem;
+          border-radius: 0;
+          border: none;
+          background-color: $search-box-color;
+        }
+        img {
+          position: absolute;
+          right: 0.4rem;
+          top: 0.35rem;
+        }
+      }
+    }
+  }
 }

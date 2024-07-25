@@ -41,3 +41,13 @@
   color: $header-text-color-1;
   @include headings-font();
 }
+
+// social icon animation to top
+@mixin animate-to-top {
+  transform: translateY(1rem);
+  transition: all 0.3s ease-in-out;
+}
+@mixin animate-to-bottom {
+  transform: translateY(-1rem);
+  transition: all 0.3s ease-in-out;
+}
