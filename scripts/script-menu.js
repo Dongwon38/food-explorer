@@ -1,4 +1,4 @@
-const body = document.body;
+const header = document.getElementById("header-wrapper");
 const btnMenu = document.getElementById("btn-menu");
 const dropdownBox = document.getElementById("dropdown-box");
 
@@ -9,6 +9,6 @@ btnMenu.addEventListener("mousedown", function (e) {
 });
 
 function openMenu() {
-  body.classList.toggle("show");
+  header.classList.toggle("show");
   dropdownBox.classList.toggle("activated");
 }
