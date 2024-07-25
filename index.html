@@ -42,21 +42,55 @@
           <input type="text" placeholder="Search" />
           <img src="images/search.png" alt="search icon" />
         </div>
+        <!-- Moved the social links to the top -->
+        <div class="social-links">
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-google"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
         <nav class="nav-bar">
           <ul>
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
             <li><a href="">Reviews</a></li>
             <li><a href="">Recipes</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
-        <div class="social-links">
-          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-          <a href=""><i class="fa-brands fa-google"></i></a>
-          <a href=""><i class="fa-brands fa-twitter"></i></a>
+      </div>
+
+      <!-- Added this div just for desktop header -->
+      <div class="header-desktop">
+        <div class="logo-and-icons-wrapper">
+          <div class="logo">
+            <img class="logo-small" src="images/small-logo.jpg" />
+            <img class="logo-large" src="images/logo.png" />
+          </div>
+          <!-- Moved the social links to the top -->
+          <div class="social-links">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-google"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="nav-bar-and-search-bar-wrapper">
+          <nav class="nav-bar">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">Recipes</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="search-bar">
+            <input type="text" placeholder="Search" />
+            <img src="images/search.png" alt="search icon" />
+          </div>
         </div>
       </div>
+      <!----------End of desktop header----------->
+
       <div class="dropdown-box" id="dropdown-box">
         <div class="search-bar">
           <div class="search-bar-innerbox">
@@ -74,9 +108,18 @@
           </ul>
         </nav>
         <div class="social-links">
-          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-          <a href=""><i class="fa-brands fa-google"></i></a>
-          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href="">
+            <i class="fa-brands fa-facebook-f primary"></i>
+            <i class="fa-brands fa-facebook-f grey"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-google primary"></i>
+            <i class="fa-brands fa-google grey"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-twitter primary"></i>
+            <i class="fa-brands fa-twitter grey"></i>
+          </a>
         </div>
       </div>
     </header>
@@ -85,22 +128,22 @@
         <h1 class="screen-reader-text">Food Explorer</h1>
         <section class="section-imgs">
           <h2 class="screen-reader-text">Recipe Images</h2>
-          <figure>
-            <img
-              srcset="images/mussel-small.jpg 350w, images/mussel.jpg 704w"
-              sizes="(max-width: 700px), 350px, 704px"
-              src="images/mussel-small.jpg"
-              alt="image of a bowl of asian mussels"
-            />
-            <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+          <figure class="mussel-pic">
+            <picture>
+              <!-- srcset will activate under 320px, to match reflow video -->
+              <source media="(min-width: 320px)" srcset="images/mussel.jpg" />
+              <source media="(max-width: 319px)" srcset="images/mussel-small.jpg" />
+              <img src="mussel-small.jpg" alt="image of a bowl of mussels" />
+            </picture>
+            <figcaption class="img-title">LOREM IPSUM DOLOR SIT</figcaption>
           </figure>
-          <figure>
+          <figure class="salad-pic">
             <img src="images/salad.jpg" alt="image of a bowl of asian salad" />
-            <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+            <figcaption class="img-title">LOREM, IPSUM DOLOR</figcaption>
           </figure>
-          <figure>
+          <figure class="pancake-pic">
             <img src="images/pancake.jpg" alt="image of asian duck pancakes" />
-            <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+            <figcaption class="img-title">SIT AMET CONSECTETUR</figcaption>
           </figure>
         </section>
         <aside>
