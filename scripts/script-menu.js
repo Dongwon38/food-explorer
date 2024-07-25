@@ -1,4 +1,3 @@
-// const body = document.body;
 const header = document.getElementById("header-wrapper");
 const btnMenu = document.getElementById("btn-menu");
 const dropdownBox = document.getElementById("dropdown-box");

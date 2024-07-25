@@ -3,8 +3,7 @@
 
 // header general
 
-
-//for specificity we need to 
+//for specificity we need to pull this out of the header selection below
 .show .dropdown-box {
   // opening-transition
   transition: height 0.3s ease, visibility 0s;
@@ -52,6 +51,7 @@ header {
         }
     }
     // <---------- function dropdown toggle start ---------->
+
     .dropdown-box {
         height: 0;
         visibility: hidden;
@@ -142,7 +142,6 @@ header {
                 gap: 0.3rem;
                 font-size: 1.3rem;
                 padding: 0 0.5rem;
-                // transition: all 0.3s ease-in-out;
                 .primary {
                     color: $primary-color;
                 }
@@ -296,7 +295,6 @@ header {
                     }
                 }
                 .nav-bar-and-search-bar-wrapper {
-                    // background-color: $secondary-color;
                     padding: 0 0.625rem;
                     display: flex;
                     justify-content: space-around;
