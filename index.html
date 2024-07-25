@@ -128,22 +128,22 @@
         <h1 class="screen-reader-text">Food Explorer</h1>
         <section class="section-imgs">
           <h2 class="screen-reader-text">Recipe Images</h2>
-          <figure>
-            <img
-              srcset="images/mussel-small.jpg 350w, images/mussel.jpg 704w"
-              sizes="(max-width: 700px), 350px, 704px"
-              src="images/mussel-small.jpg"
-              alt="image of a bowl of asian mussels"
-            />
-            <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+          <figure class="mussel-pic">
+            <picture>
+              <!-- srcset will activate under 320px, to match reflow video -->
+              <source media="(min-width: 320px)" srcset="images/mussel.jpg" />
+              <source media="(max-width: 319px)" srcset="images/mussel-small.jpg" />
+              <img src="mussel-small.jpg" alt="image of a bowl of mussels" />
+            </picture>
+            <figcaption class="img-title">LOREM IPSUM DOLOR SIT</figcaption>
           </figure>
-          <figure>
+          <figure class="salad-pic">
             <img src="images/salad.jpg" alt="image of a bowl of asian salad" />
-            <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+            <figcaption class="img-title">LOREM, IPSUM DOLOR</figcaption>
           </figure>
-          <figure>
+          <figure class="pancake-pic">
             <img src="images/pancake.jpg" alt="image of asian duck pancakes" />
-            <figcaption class="img-title">Lorem ipsum dolor sit</figcaption>
+            <figcaption class="img-title">SIT AMET CONSECTETUR</figcaption>
           </figure>
         </section>
         <aside>
