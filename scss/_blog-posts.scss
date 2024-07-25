@@ -1,18 +1,87 @@
 @use "vars" as *;
+@use "mixins" as *;
 
 .blog-card {
   background-color: $blog-background-color;
-  padding: 0.625rem;
-  margin-bottom: 0.625rem;
+  padding: .7rem .625rem;
+  margin-bottom: .625rem;
+  display: flex;
+  flex-direction: column;
 
   .article-heading {
+
     h3 {
       font-size: 2rem;
       margin: 0;
     }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
   }
 
   p {
+    font-size: 1rem;
     color: $content-text-color;
+    //the font weight for this is actually different than the provided font, so we didn't use the mixin for it
+    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 1rem;
   }
+
+  button {
+    background-color: $primary-color;
+    color: $white;
+    @include nav-font;
+    border: 1px solid transparent;
+    padding: .4063rem;
+    margin: 0 0 0 auto;
+  }
+
+  button:hover,
+  button:active {
+    background-color: $white;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: #{$tablet-large}) {
+
+    .article-heading {
+      h3 {
+        font-size: 3rem;
+      }
+
+      p {
+        margin-bottom: 2.2rem;
+      }
+    }
+
+    p {
+      margin-top: 1.5rem;
+    }
+
+    padding: 1.1rem;
+
+  }
+
+
+  @media (min-width: #{$desktop}) {
+
+    .article-heading {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+
+  }
+}
+
+.older-posts-img {
+  padding: 1.5rem 0;
 }
