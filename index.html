@@ -31,29 +31,29 @@
     <title>Food Explorer</title>
   </head>
   <body>
-    <header>
+    <header id="header-wrapper">
       <div class="header">
         <div class="logo">
-          <img class="logo-small" src="images/small-logo.jpg" />
-          <img class="logo-large" src="images/logo.png" />
+          <img class="logo-small" src="images/small-logo.jpg" alt="logo small" />
+          <img class="logo-large" src="images/logo.png" alt="logo large"/>
         </div>
-        <img class="btn-menu" id="btn-menu" src="images/menu.png" />
+        <img class="btn-menu" id="btn-menu" src="images/menu.png" alt="menu button"/>
         <div class="search-bar">
           <input type="text" placeholder="Search" />
           <img src="images/search.png" alt="search icon" />
         </div>
         <!-- Moved the social links to the top -->
         <div class="social-links">
-          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-          <a href=""><i class="fa-brands fa-google"></i></a>
-          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f" title="google icon" aria-label="facebook icon"></i></a>
+          <a href="#"><i class="fa-brands fa-google" title="google icon" aria-label="google icon"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter" title="twitter icon" aria-label="twitter icon"></i></a>
         </div>
         <nav class="nav-bar">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Reviews</a></li>
-            <li><a href="">Recipes</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Recipes</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
@@ -63,14 +63,14 @@
       <div class="header-desktop">
         <div class="logo-and-icons-wrapper">
           <div class="logo">
-            <img class="logo-small" src="images/small-logo.jpg" />
-            <img class="logo-large" src="images/logo.png" />
+            <img class="logo-small" src="images/small-logo.jpg" alt="logo small"/>
+            <img class="logo-large" src="images/logo.png" alt="logo large"/>
           </div>
           <!-- Moved the social links to the top -->
           <div class="social-links">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-google"></i></a>
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f" title="facebook icon" aria-label="facebook icon"></i></a>
+            <a href=""><i class="fa-brands fa-google" title="google icon" aria-label="facebook icon"></i></a>
+            <a href=""><i class="fa-brands fa-twitter" title="twitter icon" aria-label="twitter icon"></i></a>
           </div>
         </div>
         <div class="nav-bar-and-search-bar-wrapper">
@@ -100,25 +100,25 @@
         </div>
         <nav class="nav-bar">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Reviews</a></li>
-            <li><a href="">Recipes</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
         <div class="social-links">
-          <a href="">
-            <i class="fa-brands fa-facebook-f primary"></i>
-            <i class="fa-brands fa-facebook-f grey"></i>
+          <a href="#">
+            <i class="fa-brands fa-facebook-f primary" title="facebook icon" aria-label="facebook icon"></i>
+            <i class="fa-brands fa-facebook-f grey" title="facebook icon" aria-label="facebook icon"></i>
           </a>
-          <a href="">
-            <i class="fa-brands fa-google primary"></i>
-            <i class="fa-brands fa-google grey"></i>
+          <a href="#">
+            <i class="fa-brands fa-google primary" title="google icon" aria-label="google icon"></i>
+            <i class="fa-brands fa-google grey" title="google icon" aria-label="google icon"></i>
           </a>
-          <a href="">
-            <i class="fa-brands fa-twitter primary"></i>
-            <i class="fa-brands fa-twitter grey"></i>
+          <a href="#">
+            <i class="fa-brands fa-twitter primary" title="twitter icon" aria-label="twitter icon"></i>
+            <i class="fa-brands fa-twitter grey" title="twitter icon" aria-label="twitter icon"></i>
           </a>
         </div>
       </div>
@@ -284,45 +284,33 @@
           </section>
         </aside>
         <section class="section-blog-posts">
+          <h2 class="screen-reader-text">Blog Posts</h2>
           <article class="blog-card">
             <div class="article-heading">
               <h3>lorem ipsum dolor sit amet</h3>
               <p>Posted by Mike Lee on Sunday, August 25, 2013</p>
             </div>
-            <img
-              src="images/pasta.jpg"
-              alt="image of a bowl of spaghetti pomodoro with sauteed prawns"
-            />
+            <img src="images/pasta.jpg" alt="image of a bowl of spaghetti pomodoro with sauteed prawns" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-              soluta rem laudantium, enim fuga accusamus quia repellendus illo
-              cum.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ab aspernatur illum odio commodi
+              nesciunt nisi eius aperiam sint.
             </p>
             <button class="btn-read-more">READ MORE...</button>
           </article>
           <article class="blog-card">
             <div class="article-heading">
-              <h3>lorem ipsum dolor sit amet</h3>
+              <h3>vel, eaque quisquam sit amet</h3>
               <p>Posted by Mike Lee on Sunday, August 25, 2013</p>
             </div>
-            <img
-              src="images/ramen.jpg"
-              alt="image of a bowl of shoyu ramen with pork chasu"
-            />
+            <img src="images/ramen.jpg" alt="image of a bowl of shoyu ramen with pork chasu" />
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam,
-              deleniti? Eveniet veritatis laudantium unde nesciunt impedit omnis
-              ea qui a laboriosam error, voluptatum, in quibusdam! Harum modi
-              sunt quo corrupti!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, ab aspernatur illum odio commodi
+              nesciunt nisi eius aperiam sint.
             </p>
             <button class="btn-read-more">READ MORE...</button>
           </article>
-          <a href="#"
-            ><img
-              class="older-posts-img"
-              src="images/previous-btn.png"
-              alt="clickable image that links to older blog posts"
-          /></a>
+          <a href="#"><img class="older-posts-img" src="images/previous-btn.png"
+              alt="clickable image that links to older blog posts" /></a>
         </section>
       </div>
     </main>

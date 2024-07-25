@@ -14,7 +14,7 @@ footer {
             color: $white;
         }
        
-        @media (min-width: $desktop) {
+        @media (min-width: $tablet-small) {
             padding: 10px 20px;
         }
 }
